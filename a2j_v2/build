@@ -1,0 +1,4 @@
+echo $Id: build,v 1.1.1.1 2004/06/18 06:38:12 ibbo Exp $
+export CLASSPATH=$CLASSPATH:./lib/log4j.jar
+export CLASSPATH=$CLASSPATH:./lib/ki-util.jar
+ant

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jzkit</groupId>
+  <artifactId>a2j</artifactId>
+  <name>ASN.1 to Java Compiler</name>
+  <version>2.0.0</version>
+  <url>http://www.k-int.com</url>
+  <ciManagement>
+    <system>continuum</system>
+    <url>http://developer.k-int.com:8081/continuum</url>
+    <notifiers>
+      <notifier>
+        <configuration>
+          <address>ian.ibbotson@k-int.com</address>
+        </configuration>
+      </notifier>
+    </notifiers>
+  </ciManagement>
+  <scm>
+    <connection>scm:svn:http://developer.k-int.com/svn/a2j/tags/a2j_2_0_0</connection>
+    <developerConnection>scm:svn:svn://developer.k-int.com/home/svn/repositories/a2j/tags/a2j_2_0_0</developerConnection>
+  </scm>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>1.6.5</version>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>k-int-repository</id>
+      <name>Knowledge Intergation Maven2 Repository</name>
+      <url>scp://developer.k-int.com/home/developer.k-int.com/html/maven2</url>
+    </repository>
+    <site>
+      <id>k-int-repository</id>
+      <name>A2J Project Website</name>
+      <url>scp://developer.k-int.com/home/developer.k-int.com/html/projects/a2j</url>
+    </site>
+  </distributionManagement>
+</project>

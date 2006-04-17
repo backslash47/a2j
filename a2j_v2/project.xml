@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<project>
+  <pomVersion>3</pomVersion>
+  <name>a2j_v2</name>
+  <id>a2j_v2</id>
+  <currentVersion>2.0.9</currentVersion>
+  <organization>
+    <name>Knowledge Integration Ltd</name>
+    <url>http://developer.k-int.com/a2j_v2/</url>
+  </organization>
+  <inceptionYear>1999</inceptionYear>
+  <package>org.jzkit.a2j</package>
+  <shortDescription>ASN to Java Compiler and Runtime Classes</shortDescription>
+
+  <!-- Gump integration -->
+  <!-- <gumpRepositoryId>ki-jzkit</gumpRepositoryId>-->
+
+  <description>
+    ASN to Java Compiler and Runtime Classes
+  </description>
+
+  <url>http://developer.k-int.com/a2j_v2/</url>
+  <issueTrackingUrl></issueTrackingUrl>
+
+  <siteAddress>developer.k-int.com</siteAddress>
+  <siteDirectory>
+    /home/developer.k-int.com/html/a2j_v2
+  </siteDirectory>
+  <distributionDirectory>
+    /home/developer.k-int.com/html/maven/jzkit1/distributions
+  </distributionDirectory>
+
+
+  <distributionSite>developer.k-int.com</distributionSite>
+  <distributionDirectory>/home/developer.k-int.com/html/maven</distributionDirectory>
+
+  <repository>
+    <connection>
+      scm:cvs:pserver:anonymous@developer.k-int.com:/home/cvs/developer:a2j_v2
+    </connection>
+    <url>
+      http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/a2j/a2j/
+    </url>
+  </repository>
+
+  <versions>
+    <version>
+      <id>2.0.7</id>
+      <name>2.0.7</name>
+      <tag>a2j_2_0_7</tag>
+    </version>
+    <version>
+      <id>2.0.8</id>
+      <name>2.0.8</name>
+      <tag>HEAD</tag>
+    </version>
+  </versions>
+
+  <mailingLists>
+    <mailingList>
+      <name>ki-a2j User List</name>
+      <subscribe></subscribe>
+      <unsubscribe></unsubscribe>
+      <archive></archive>
+    </mailingList>
+    <mailingList>
+      <name>ki-a2j Developer List</name>
+      <subscribe></subscribe>
+      <unsubscribe></unsubscribe>
+      <archive></archive>
+    </mailingList>
+  </mailingLists>
+
+  <developers>
+
+    <developer>
+      <name>Ian Ibbotson</name>
+      <id>ianibbo</id>
+      <email>ian.ibbotson@k-int.com</email>
+      <organization>Knowledge Integration Ltd</organization>
+    </developer>
+
+  </developers>
+
+  <dependencies>
+
+    <dependency> <id>junit</id> <version>3.7</version> <url>http://www.junit.org</url> </dependency> 
+    <dependency> <id>ant</id> <version>1.5.3-1</version> <url>http://jakarta.apache.org/ant</url> </dependency>
+    <dependency><id>commons-logging</id> <version>1.0.1</version> <url>http://jakarta.apache.org/commons</url> </dependency>
+
+
+  </dependencies>
+
+  <build>
+
+    <nagEmailAddress>
+      ian.ibbotson@k-int.com
+    </nagEmailAddress>
+
+    <sourceDirectory>src</sourceDirectory>
+
+    <unitTestSourceDirectory>test</unitTestSourceDirectory>
+
+    <integrationUnitTestSourceDirectory/>
+
+    <aspectSourceDirectory/>
+
+    <!-- Unit test cases -->
+    <unitTest>
+      <includes>
+        <include>**/*Test.java</include>
+      </includes>
+      <excludes>
+        <exclude>**/RepositoryTest.java</exclude>
+      </excludes>
+    </unitTest>
+              
+    <!-- J A R  R E S O U R C E S -->
+    <!-- Resources that are packaged up inside the JAR file -->
+    <resources>
+      <resource>
+        <directory>${basedir}</directory>
+        <includes>
+          <include>oidreg.default</include>
+        </includes>
+      </resource>
+    </resources>
+
+  </build>
+</project>

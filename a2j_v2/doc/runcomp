@@ -1,0 +1,10 @@
+echo This is how we used to do it in the bad old days pre ant task :)
+echo Creating encoders and type classes..........
+echo 
+rm -f [A-Z]*/*.java
+for jar in `ls ../lib/*.jar ../dist/*.jar`
+do
+  export CLASSPATH=$CLASSPATH:$jar
+done
+> zout
+java -DCodecBasePackage="org.jzkit.a2j.gen" org.jzkit.a2j.codec.comp.runParser ./z3950v3.asn 2>> zout
