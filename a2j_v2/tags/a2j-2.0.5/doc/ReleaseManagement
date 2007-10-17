@@ -1,0 +1,15 @@
+$Id: ReleaseManagement,v 1.1.1.1 2004/06/18 06:38:13 ibbo Exp $
+
+Release management for ki-a2j
+
+A2J Releases should be controlled my maven now, although you may continue to use simple
+ant build files for day-to-day development.
+
+When the time comes to make a release use
+
+maven<cr> to make the build
+maven jar:deploy<cr> to upload the jar file to the maven repository
+
+
+Log in as a user that matches your subversion username, check out project
+mvn release:prepare
